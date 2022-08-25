@@ -1,4 +1,5 @@
 import logo from '../assets/sneaker-logo.jpg'
+import CartWidget from './Cartwidget';
 
 const NavBar = () => {
     return(
@@ -27,6 +28,7 @@ const NavBar = () => {
                             </li>
                         </ul>
                     </div>
+                    <CartWidget />
                 </div>    
             </nav>
         </main>
