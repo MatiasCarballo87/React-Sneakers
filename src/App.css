@@ -91,3 +91,42 @@ p {
   padding: 1vh;
 }
 
+.cont-button {
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn- {
+  width: 50px;
+  background: #282c34;
+  border-radius: 5px;
+  color: white;
+}
+
+.btnplus {
+  width: 50px;
+  background: #282c34;
+  border-radius: 5px;
+  color: white;
+}
+
+.cantidad {
+  color: black;
+}
+
+.addToCart {
+  display: flex;
+  margin: 20px auto;
+  width: 200px;
+  justify-content: center;
+}
+
+.btnAdd {
+  height: 40px;
+  background: #282c34;
+  color: white;
+  border-radius: 5px;
+}
