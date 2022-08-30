@@ -1,17 +1,17 @@
-import logo from '../assets/sneaker-logo.jpg'
+import logo from '../assets/sneaker.png'
 import CartWidget from './Cartwidget';
 
 const NavBar = () => {
     return(
         <>
         <main className="container">
-            <div className='main-logo'>
-                <header>
-                    <img src={logo} className="Img-logo" alt="logosneaker"/>
-                </header>
-            </div>
             <nav>
                 <div className="Navbar">
+                    <div className='main-logo'>
+                        <header>
+                            <img src={logo} className="Img-logo" alt="logosneaker"/>
+                        </header>
+                    </div>
                     <div className="Navbar-collapse">
                         <ul className="Nav-list">
                             <li>

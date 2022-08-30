@@ -1,17 +1,25 @@
-import ItemCount from "./ItemCount";
+import { useEffect, useState } from "react";
+import promesa from '../utils/promise';
+import {data} from '../utils/data';
+import ItemList from "./ItemList";
 
 const ItemListContainer = (props) => {
-    const onAdd = (cant) => {
-        alert("Añadiste " + cant + " items al carrito.");
-    }
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        promesa(data)
+            .then(result => setProducts(result))
+            .catch(err => console.log(err))
+    })
     
     return(
         <>
-            <div className="aviso">
-                <h1>{props.greeting}</h1>
-                <p>Pronto encontraran sus Sneakers preferidos!</p>
-            </div>
-            <ItemCount stock={5} initial={1} onAdd={onAdd}/>
+            <section>
+                <h1 className="aviso">{props.greeting}</h1>  
+                <div className="cards-content">
+                    <ItemList items={products} />
+                </div>
+            </section>
         </>
     );
 }
