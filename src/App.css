@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body {
+  background: rgb(247, 246, 246);
 }
 
 .main-logo {
@@ -32,18 +32,20 @@ header {
   list-style-type: none;
   gap: 2vw;
   justify-content: center;
+  font-size: larger;
 }
 
 .Navbar-collapse {
   flex: 60%;
 }
 
+.jordan, .nike, .adidas {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
-  margin: 0 16px;
-  font-size: 1.5rem;
   color: white;
-  padding: 0.5rem 1rem;
 }
 
 .log {
@@ -64,9 +66,9 @@ a:hover {
 }
 
 .Img-cart {
-  height: 64px;
-  padding-right: 15px;
-  padding-left: 15px;
+  height: 3.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 span {
@@ -97,8 +99,9 @@ span {
   justify-content: center;
 }
 
-/* .card {
+.card {
   width: 250px;
+  box-shadow: 10px 10px 5px 0px rgba(100, 94, 94, 0.75);
 }
 
 .img-card {
@@ -111,7 +114,7 @@ span {
   text-align: center;
   padding: 1rem 0.5rem;
   height: 262px;
-} */
+}
 
 .cont-button {
   display: flex;

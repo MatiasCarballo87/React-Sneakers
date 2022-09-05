@@ -5,7 +5,7 @@ let promesa = (task) => {
         if (ok) {
             setTimeout(() => {
                 resolve(task)
-            }, 2000);
+            }, 500);
         } else {
             reject("Error")
         }

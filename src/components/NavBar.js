@@ -1,5 +1,6 @@
 import logo from '../assets/sneaker.png'
 import CartWidget from './Cartwidget';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return(
@@ -9,19 +10,19 @@ const NavBar = () => {
                 <div className="Navbar">
                     <div className='main-logo'>
                         <header>
-                            <img src={logo} className="Img-logo" alt="logosneaker"/>
+                            <Link to='/'><img src={logo} className="Img-logo" alt="logosneaker"/></Link>
                         </header>
                     </div>
                     <div className="Navbar-collapse">
                         <ul className="Nav-list">
                             <li>
-                                <a href='./index.html'>JORDAN</a>
+                                <Link to='category/Jordan'><p className='jordan'>JORDAN</p></Link>
                             </li>
                             <li>
-                                <a href='./index.html'>NIKE</a>
+                                <Link to='category/Nike'><p className='nike'>NIKE</p></Link>
                             </li>
                             <li>
-                                <a href='./index.html'>ADIDAS</a>
+                                <Link to='category/Adidas'><p className='adidas'>ADIDAS</p></Link>
                             </li>
                             <li>
                                 <a href='./index.html' className='log'>LOGIN</a>
