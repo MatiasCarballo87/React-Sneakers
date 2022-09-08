@@ -113,7 +113,11 @@ span {
   background-color: rgb(169, 173, 173);
   text-align: center;
   padding: 1rem 0.5rem;
-  height: 262px;
+  height: 150px;
+}
+
+.main-price {
+  font-size: 1.5rem;
 }
 
 .cont-button {
@@ -131,6 +135,7 @@ span {
   background: #282c34;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
 .btnplus {
@@ -139,6 +144,7 @@ span {
   background: #282c34;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
 .btnAdd {
@@ -146,10 +152,8 @@ span {
   background: #282c34;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
 }
-
-
-/* solo para desafio martes */
 
 .card-big {
   display:flex;
@@ -171,4 +175,21 @@ span {
 
 .pprice {
   font-size: x-large;
+}
+
+.btn-cart-cont {
+  display: flex;
+  margin: 0 auto;
+}
+
+.btn-cart {
+  height: 30px;
+  background: #282c34;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cont-check {
+  height: 30px;
 }
