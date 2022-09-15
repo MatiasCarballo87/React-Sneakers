@@ -193,3 +193,38 @@ span {
 .cont-check {
   height: 30px;
 }
+
+.yourCart {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.table {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+}
+
+table {
+  width: 100%;
+  background-color: #a9adad;
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+th {
+  width: 150px;
+}
+
+.imageCart {
+  width: 100%;
+}
+
+.removeAll {
+  text-align: center;
+}
