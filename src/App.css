@@ -1,5 +1,5 @@
 body {
-  background: rgb(247, 246, 246);
+  background: rgb(238, 236, 236);
 }
 
 .main-logo {
@@ -52,11 +52,6 @@ a {
   background: rgb(165, 33, 33);
 }
 
-a:hover {
-  background: rgb(218, 207, 207);
-  color: black;
-}
-
 .Cart {
   display: flex;
   flex: 20%;
@@ -65,8 +60,11 @@ a:hover {
   width: 100%;
 }
 
+.cartNavbar {
+  display: flex;
+}
+
 .Img-cart {
-  height: 3.5rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -101,7 +99,6 @@ span {
 
 .card {
   width: 250px;
-  box-shadow: 10px 10px 5px 0px rgba(100, 94, 94, 0.75);
 }
 
 .img-card {
@@ -110,7 +107,7 @@ span {
 }
 
 .card-desc {
-  background-color: rgb(169, 173, 173);
+  background-color: rgb(115, 117, 117);
   text-align: center;
   padding: 1rem 0.5rem;
   height: 150px;
@@ -201,13 +198,13 @@ span {
 
 .table {
   width: 80%;
-  margin: 0 auto;
+  margin: 1rem ;
   margin-bottom: 4vh;
 }
 
 table {
   width: 100%;
-  background-color: #a9adad;
+  background-color: rgb(160, 161, 161);
   border-collapse: collapse;
 }
 
@@ -215,9 +212,6 @@ td, th {
   padding: 10px;
   border: 1px solid black;
   text-align: center;
-}
-
-th {
   width: 150px;
 }
 
@@ -226,5 +220,53 @@ th {
 }
 
 .removeAll {
+  width: 50%;
   text-align: center;
+}
+
+.alphaContainer {
+  display: flex;
+}
+
+.cartContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 60%;
+}
+
+.cardCheckOut {
+  flex: 40%;
+  width: 60%;
+  background: #5e6166;
+  color:rgb(238, 236, 236);
+  margin: 1rem;
+  height: 300px;
+  padding: 2rem;
+}
+
+h4 {
+  text-align: center;
+}
+
+.space {
+  border-bottom: 1px solid rgb(231, 231, 231);
+  margin: 20px 0px;
+}
+
+.subTotal, .taxes, .orderTotal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.p { 
+  margin: 0;
+}
+
+.empty {
+  text-align: center;
+}
+
+.continue {
+  margin-left: 45%;
 }

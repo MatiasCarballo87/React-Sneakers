@@ -43,9 +43,17 @@ const CartContextProvider = ({children}) => {
         setCartView([])
     };
 
+    const totalItems = () => {
+        let cants = cartView.map(item => item.cant);
+        return cants.reduce(((prev, curr) => prev + curr), 0)
+    }
+
+    const totalCart = () => {
+        return cartView.reduce((acc, item) => acc + item.price * item.cant, 0)
+    };
 
     return (
-        <CartContext.Provider value={{cartView, addItem, removeItem, clear}}>
+        <CartContext.Provider value={{cartView, addItem, removeItem, clear, totalItems, totalCart}}>
             {children}
         </CartContext.Provider>
     );
