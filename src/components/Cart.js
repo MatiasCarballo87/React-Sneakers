@@ -1,11 +1,51 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from 'react-router-dom';
+import { serverTimestamp, setDoc, doc, collection, updateDoc, increment } from "firebase/firestore";
+import { db }from '../utils/firebaseConfig';
 
 const Cart = () => {
-    const view = useContext(CartContext);
+    const cctx = useContext(CartContext);
 
-    if (view.totalItems() > 0){
+    const createOrder = () => {
+        let itemsDB = cctx.cartView.map(item => ({
+            id: item.id,
+            title: item.name,
+            price: item.price,
+            cant: item.cant,
+            subtotal: item.price * item.cant
+        }))
+        let order = {
+            buyer: {
+                name: "Darth Vader",
+                email: "darth@starwars.com",
+                phone: "987654321"
+            },
+            date: serverTimestamp(),
+            items: itemsDB,
+            total: cctx.totalCart()
+        }
+
+        const createOrderInFS = async () => {
+            const newOrderRef = doc(collection(db, "orders"));
+            await setDoc(newOrderRef, order);
+            return newOrderRef;
+        }
+
+        createOrderInFS()
+            .then(result => {alert('Success! Your order is:' + result.id)
+            cctx.cartView.forEach(async(item) => {
+                const itemRef = doc(db, "products", item.id);
+                await updateDoc(itemRef, {
+                    stock: increment(-item.cant)
+                });
+            })
+            cctx.clear()
+        })
+        .catch(err => console.log(err))    
+    }
+
+    if (cctx.totalItems() > 0){
     return  (
         <>
             <section>
@@ -13,7 +53,7 @@ const Cart = () => {
                 <div className="alphaContainer"> 
                     <div>
                     {
-                        view.cartView.map( item => 
+                        cctx.cartView.map( item => 
                         <>
                             <div className="cartContainer">
                                 <div class="table">
@@ -25,7 +65,7 @@ const Cart = () => {
                                                 <td>$ {item.price}</td>
                                                 <td><strong>Items:</strong> {item.cant}</td>
                                                 <td><strong>SubTotal:</strong> ${item.cant * item.price}</td>
-                                                <td><button onClick={() => view.removeItem(item.id)}>Delete</button></td>
+                                                <td><button onClick={() => cctx.removeItem(item.id)}>Delete</button></td>
                                             </tr>
                                         </tbody>
                                     </table>    
@@ -40,7 +80,7 @@ const Cart = () => {
                         <div className="space"></div>
                         <div className="subTotal">
                             <span>Subtotal</span>
-                            <p className="p">$ {view.totalCart()}</p>
+                            <p className="p">$ {cctx.totalCart()}</p>
                         </div>
                         <div className="taxes">
                             <span>Taxes</span>
@@ -49,12 +89,12 @@ const Cart = () => {
                         <div className="space"></div>
                         <div className="orderTotal">
                             <span>Order Total</span>
-                            <p className="p">$ {view.totalCart()}</p>
+                            <p className="p">$ {cctx.totalCart()}</p>
                         </div>
-                        <button>PLACE ORDER</button>
+                        <button onClick={createOrder}>PLACE ORDER</button>
                     </div>
                 </div>
-                <div className="removeAll"><button onClick={view.clear}>Remove All</button></div>
+                <div className="removeAll"><button onClick={cctx.clear}>Remove All</button></div>
             </section>
         </>
     )  

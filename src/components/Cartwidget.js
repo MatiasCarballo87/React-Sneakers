@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 const CartWidget = () => {
 
-    const view = useContext(CartContext);
+    const cctx = useContext(CartContext);
 
     return (
         <>
@@ -13,11 +13,11 @@ const CartWidget = () => {
                 <Link to='/cart' className='cartNavbar'>
                     <img src= { 'https://firebasestorage.googleapis.com/v0/b/react-sneaker-51ace.appspot.com/o/carrito%20blanco.png?alt=media&token=211fc884-510d-4e6f-b6d8-e18ab3bd792d' } className="Img-cart" alt="carrito de compras"/>
                     {
-                        view.totalItems() === 0
+                        cctx.totalItems() === 0
 
                         ? <span></span>
 
-                        : <span><p className='cant-cart'>{view.totalItems()}</p></span>
+                        : <span><p className='cant-cart'>{cctx.totalItems()}</p></span>
                     }
                     
                 </Link>

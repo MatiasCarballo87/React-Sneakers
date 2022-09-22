@@ -11,6 +11,7 @@ const ItemListContainer = (props) => {
     useEffect(() => {
         firestorePromise(Id)
             .then(result => setProducts(result))
+            .catch(err => console.log(err))
     }, [Id]);   
 
     

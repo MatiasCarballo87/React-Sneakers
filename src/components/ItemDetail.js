@@ -6,12 +6,12 @@ import ItemCount from "./ItemCount";
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);
 
-    const view = useContext(CartContext);
+    const cctx = useContext(CartContext);
 
     const onAdd = (cant) => {
         alert("Añadiste " + cant + " " + item.name + " al carrito.");
         setItemCount(cant);
-        view.addItem(item, cant);
+        cctx.addItem(item, cant);
     }
 
     return (
