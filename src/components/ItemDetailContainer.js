@@ -2,6 +2,7 @@ import { useState , useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
 import { firestorePromisetwo } from '../utils/firebaseConfig';
+import './styles/ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState();
@@ -17,7 +18,7 @@ const ItemDetailContainer = () => {
         <>
             {
                 product ?
-                    (<section>
+                    (<section className='sectionItem'>
                         <ItemDetail item={product}/>
                     </section>)
                 :("Loading...")

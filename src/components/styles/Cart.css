@@ -1,0 +1,132 @@
+
+.sectionCart {
+    height: 80%;
+}
+
+.yourCart {
+    text-align: center;
+    font-size: xx-large;
+    margin: 0;
+    padding: 4vh;
+}
+
+.alphaContainer {
+    display: flex;
+}
+
+.cartContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 60%;
+}
+
+.table {
+    width: 80%;
+    padding: 1rem ;
+    margin-bottom: 4vh;
+    margin: auto;
+}
+  
+table {
+    width: 100%;
+    background-color: rgb(160, 161, 161);
+    border-collapse: collapse;
+}
+  
+td, th {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: center;
+    width: 150px;
+}
+  
+.imageCart {
+    width: 100%;
+}
+
+.btnDelete {
+    cursor: pointer;
+    border-radius: 5px;
+    background: #282c34;
+    color: white;
+}
+
+.contCardCheckOut {
+    flex: 40%;
+}
+
+.cardCheckOut {
+    width: 60%;
+    background: #5e6166;
+    color:rgb(238, 236, 236);
+    margin: 1rem;
+    height: 300px;
+    padding: 2rem;
+}
+  
+h4 {
+    text-align: center;
+}
+
+.space {
+    border-bottom: 1px solid rgb(231, 231, 231);
+    margin: 20px 0px;
+}
+  
+.subTotal, .taxes, .orderTotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+  
+.p { 
+    margin: 0;
+}
+  
+.placeOrder {
+    text-align: center;
+}
+  
+.btnPO {
+    width: 80%;
+    background: #282c34;
+    color: white;
+    height: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.removeAll {
+    width: 50%;
+    text-align: center;
+}
+  
+.removeBtn {
+    cursor: pointer;
+    width: 100px;
+    border-radius: 5px;
+    background: #282c34;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.emptyCart {
+    height: 80vh;
+}
+  
+.empty {
+    text-align: center;
+    margin: 0;
+    padding: 5vh;
+}
+  
+.continue {
+    margin-left: 45%;
+    background: #282c34;
+    color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}

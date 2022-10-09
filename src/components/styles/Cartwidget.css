@@ -1,0 +1,28 @@
+
+.Cart {
+    display: flex;
+    flex: 20%;
+    justify-content: center;
+    height: 64px;
+    width: 100%;
+}
+  
+.cartNavbar {
+    display: flex;
+}
+  
+.Img-cart {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+  
+span {
+    display: inline-block;
+    width: 20%;
+}
+  
+.cant-cart {
+    color: white;
+    font-size: x-large;
+    margin: 0;
+}

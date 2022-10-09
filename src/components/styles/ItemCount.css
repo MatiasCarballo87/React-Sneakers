@@ -1,0 +1,36 @@
+
+.cont-button {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+  
+.btn- {
+    width: 50px;
+    height: 30px;
+    background: #282c34;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+  
+.btnplus {
+    width: 50px;
+    height: 30px;
+    background: #282c34;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+  
+.btnAdd {
+    height: 30px;
+    background: #282c34;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  

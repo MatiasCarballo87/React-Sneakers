@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './styles/ItemCount.css';
 
 
 const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
@@ -24,7 +25,7 @@ const ItemCount = ({ stock = 0, initial = 1, onAdd}) => {
         <>
             <div className="cont-button">
                 <button onClick={subtract} className="btn-">-</button>
-                <p className='cantidad'>{cant}</p>
+                <p>{cant}</p>
                 <button onClick={add} className="btnplus">+</button>
                 {
                     stock && cant

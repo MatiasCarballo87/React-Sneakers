@@ -16,6 +16,7 @@ const ItemList = (props) => {
                     name={item.name}
                     price={item.price}
                     stock={item.stock}
+                    minimage={item.minimage}
                 />
                 ))
         }

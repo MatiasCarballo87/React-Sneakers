@@ -32,7 +32,6 @@ export const firestorePromisetwo = async (id) => {
     
 }
 
-
 export const firestorePromise = async (Id) => {
     let q;
 

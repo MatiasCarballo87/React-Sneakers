@@ -1,0 +1,19 @@
+
+.mainSection {
+    margin-bottom: 4.1vh;
+}  
+  
+.aviso {
+    text-align: center;
+    margin: 0;
+    padding-top: 3vh;
+}
+
+.cards-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    justify-content: center;
+}
